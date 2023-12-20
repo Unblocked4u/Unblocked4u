@@ -1,0 +1,492 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #222, #333);
+  color: #fff;
+}
+
+header {
+  background: #111;
+  padding: 20px 0;
+}
+
+nav a.active {
+  color: #ff55ff;
+  text-decoration: underline;
+}
+
+main {
+  padding: 50px;
+}
+
+.hero {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ff00ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+  position: relative; /* Add this line to position the icon */
+}
+
+.btn .icon {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.btn:hover {
+  background: #ff0066;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  background: #111;
+  padding: 20px -0px;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff00ff;
+  transition: width 0.3s ease;
+}
+
+nav li:hover a {
+  color: #ff00ff;
+}
+
+nav li:hover::after {
+  width: 100%;
+}
+
+.w3-quarter {
+  margin-top: 32px;
+}
+
+.w3-quarter i {
+  font-size: 28px;
+  color: #ff00ff;
+}
+
+.w3-large {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.w3-quarter p:last-child {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.w3-quarter {
+  border: #000 solid 3px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: 0 0 0 transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.w3-quarter:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgb(255, 0, 255, 0.8);
+}
+
+.w3-quarter:hover * {
+  color: #ff0066;
+}
+
+.neon2 {
+  font-size: 1.5em; /* Reduce the font size by half */
+  color: #ff55ff; /* Pinkish-purple color */
+  text-shadow: 0 0 2px rgba(255, 85, 255, 0.2), 0 0 4px rgba(255, 85, 255, 0.2),
+    0 0 6px rgba(255, 85, 255, 0.2), 0 0 8px rgba(255, 85, 255, 0.2),
+    0 0 10px rgba(255, 85, 255, 0.2), 0 0 12px rgba(255, 85, 255, 0.2),
+    0 0 14px rgba(255, 85, 255, 0.2);
+  animation: flicker 1.5s infinite alternate;
+  text-decoration: underline; /* Underline the text */
+  background-image: linear-gradient(
+    90deg,
+    #ff55ff,
+    #aa00aa
+  ); /* Gradient from pink to purple */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.1; /* Adjust the opacity as needed */
+  }
+  100% {
+    opacity: 0.8; /* Adjust the opacity as needed */
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.sponsor-main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.sponsor-image {
+  width: 15%;
+  padding: 30px;
+  margin: 10px;
+}
+
+.sponsor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.faq {
+  background-color: #f9f9f9; /* Light gray background */
+  text-align: left;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0;
+}
+
+.buttonv2 {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+             0 0 4em 1em var(--glow-spread-color),
+             inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.buttonv2::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+.buttonv2:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+              0 0 4em 2em var(--glow-spread-color),
+              inset 0 0 .75em .25em var(--glow-color);
+}
+
+.buttonv2:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+              0 0 2.5em 2em var(--glow-spread-color),
+              inset 0 0 .5em .25em var(--glow-color);
+}
+
+.glowing-txt {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* Add this CSS to your existing stylesheet or create a new one */
+.logo {
+    max-width: 310px; /* Adjust the maximum width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+    border: 3px solid #fff; /* Add a white border around the logo */
+    border-width: 13%; /* Make the border 13% bigger */
+    border-radius: 10px; /* Optional: Add rounded corners to the border */
+    padding: 6px; /* Optional: Add padding inside the border */
+}
+
+       #quickJoinContainer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        #quickJoin {
+            background-color: #ff00ff;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #ff00ff;
+            z-index: 1;
+        }
+
+        #quickJoin:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff00ff, #00E6F6);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+        }
+
+        #quickJoin:hover:before {
+            opacity: 0;
+        }
+
+        #quickJoin:hover {
+            background-color: #ff0066;
+        }
+		
+		#player-count {
+  text-align: center;
+  transform: rotate(90deg); /* Rotate the text 90 degrees */
+  white-space: nowrap; /* Prevent text from wrapping */
+  position: fixed; /* Fixed positioning */
+  left: 10px; /* Adjust the left position as needed */
+  bottom: 50%; /* Adjust the bottom position as needed */
+  transform-origin: bottom left; /* Set the rotation origin to bottom left */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #029B8C;
+}
+
+.wrapper {
+  position: fixed;
+  bottom: 50px;
+  left: -350px;
+  max-width: 340px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 25px 22px;
+  transition: left 1.9s ease, opacity 1s ease; /* Increase opacity transition duration */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+.wrapper.show {
+  left: 20px;
+  opacity: 1;
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+header i {
+  color: #029B8C;
+  font-size: 32px;
+}
+
+header h2 {
+  color: #029B8C;
+  font-weight: 500;
+}
+
+.wrapper .data {
+  margin-top: 16px;
+}
+
+.wrapper .data p {
+  color: #333;
+  font-size: 16px;
+}
+
+.data p a {
+  color: #029B8C;
+  text-decoration: none;
+}
+
+.data p a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .buttons {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons .button2 {
+  border: none;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  background: #029B8C;
+  cursor: pointer;
+  width: calc(100% / 2 - 10px);
+  transition: all 0.2s ease;
+}
+
+.buttons .button2:hover {
+  opacity: 0.8;
+}
+
+#declineBtn {
+  border: 2px solid #029B8C;
+  background-color: #fff;
+  color: #029B8C;
+}
+
+#declineBtn:hover {
+  background-color: #029B8C;
+  color: #fff;
+}
+
+
+
+ .faq-entry {
+    margin-top: 32px;
+    border: #000 solid 2px; /* Adjusted border width */
+    padding: 16px;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 0 0 0 transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content; /* Adjusted to fit content width */
+    display: block;
+    box-sizing: border-box;
+}
+
+.faq-entry:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+}
+
+.faq-entry:hover * {
+    color: #ff0066;
+}
+
+.faq-entry i {
+    font-size: 48px;
+    color: #ff00ff;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.faq-entry h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 16px;
+}
+
+.faq-entry p:last-child {
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+
+
+
+
+        .circular-image {
+            width: 150px; /* Adjust the size of the circular image */
+            height: 150px;
+            border-radius: 50%; /* Make it circular */
+            overflow: hidden; /* Hide the parts of the image outside the circle */
+        }
+
+        .circular-image img {
+            width: 100%; /* Make sure the image covers the circular container */
+            height: 100%;
+            object-fit: cover; /* Maintain the aspect ratio and cover the entire container */
+            display: block; /* Remove extra space below the image */
+        }
+		
+		
+		
+
+
+
